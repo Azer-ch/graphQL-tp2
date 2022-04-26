@@ -40,5 +40,59 @@ export const db = {
             id: 3,
             designation: 'GL4'
         },
-    ]
+    ],
+    todos: [
+        {
+            id:1,
+            name:'Learn React',
+            content:'Learn React',
+            status:'DONE',
+            user:1
+        },
+        {
+            id:2,
+            name:'Learn Angular',
+            content:'Learn Angular',
+            status:'WAITING',
+            user:1
+        },
+        {
+            id:3,
+            name:'Learn Vue',
+            content:'Learn Vue',
+            status:'CANCELED',
+            user:2
+        },
+        {
+            id:4,
+            name:'Learn Node',
+            content:'Learn Node',
+            status:'IN_PROGRESS',
+            user:2
+        },
+        {
+            id:5,
+            name:'Learn MongoDB',
+            content:'Learn MongoDB',
+            status:'WAITING',
+            user:3
+        }
+    ],
+    users:[
+        {
+            id:1,
+            name:'John Wick',
+            email:'johnWick@gmail.com',
+        },
+        {
+            id:2,
+            name:'Joe Biden',
+            email:'joeBiden@gmail.com',
+        },
+        {
+            id:3,
+            name:'Elon Musk',
+            email: 'elonMusk@gmail.com'
+        }
+    ],
 }

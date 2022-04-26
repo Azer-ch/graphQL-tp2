@@ -21,5 +21,15 @@ export const Query = {
         return db.students.find(
             (student) => student.id == id
         );
-    }
+    },
+    getTodoById:(parent, args, context, info) => {
+        return db.todos.find(
+            (todo) => todo.id == args.id
+        );
+    },
+    getUserById:(parent,args,context,info) => {
+        return db.users.find(
+            (user) => user.id == args.id
+        );
+    },
 }
