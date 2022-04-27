@@ -1,4 +1,3 @@
-import { db } from "../data/db.js";
 
 export const Query = {
     hello: (parent, args, context, info) => {
@@ -17,17 +16,17 @@ export const Query = {
     getAllStudents: () => {
         return db.students;
     },
-    getStudent: (_, {id}) => {
+    getStudent: (_, {id},{db}) => {
         return db.students.find(
             (student) => student.id == id
         );
     },
-    getTodoById:(parent, args, context, info) => {
+    getTodoById:(parent, args, {db}, info) => {
         return db.todos.find(
             (todo) => todo.id == args.id
         );
     },
-    getUserById:(parent,args,context,info) => {
+    getUserById:(parent,args,{db},info) => {
         return db.users.find(
             (user) => user.id == args.id
         );

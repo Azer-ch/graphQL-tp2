@@ -44,5 +44,31 @@ type Query {
     getStudent(id:ID!): Student
     getTodoById(id:ID!): Todo
     getUserById(id:ID!): User
+    getAllClassroom: [Classroom]
+}
+input AddClassroomInput {
+    designation: String!
+}
+input AddTodoInput{
+    name:String!
+    content:String!
+    user:String!
+}
+input modifyTodoInput{
+    name:String
+    content:String
+    user:String
+    status:Status
+}
+type Mutation  {
+    addClassroom(addClassroomInput: AddClassroomInput): Classroom
+    addTodo(addTodoInput:AddTodoInput):Todo
+    modifyTodo(modifyTodoInput:modifyTodoInput,id:String):Todo
+    deleteTodo(id:String):Todo
+}
+
+type Subscription {
+    newClassroom: Classroom!
+    changedTodo: Todo!
 }
 
