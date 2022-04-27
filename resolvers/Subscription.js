@@ -1,7 +1,7 @@
 export const Subscription = {
-    changedTodo: {
+    todo: {
         subscribe(parent, args, { pubsub }, info) {
-            return pubsub.asyncIterator('Todo');
+            return pubsub.asyncIterator('todo');
         }
     },
 }

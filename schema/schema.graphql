@@ -69,6 +69,6 @@ type Mutation  {
 
 type Subscription {
     newClassroom: Classroom!
-    changedTodo: Todo!
+    todo: Todo!
 }
 
